@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧮 Tabulex - Front-End
 
-## Getting Started
+Este é o **front-end** do projeto **Tabulex**, desenvolvido em **Next.js** por Pedro Henrique. A aplicação tem foco em exibir e gerenciar dados de forma clara e organizada, utilizando componentes modernos e validações robustas.
 
-First, run the development server:
+> ⚙️ Para funcionamento completo, este projeto depende da API disponível no repositório [Tabulex - Back-End](https://github.com/pedrihq/tabulex-back) (ou ajuste conforme o nome real do repositório).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+- [Lucide React Icons](https://lucide.dev/)
+- [Axios](https://axios-http.com/)
+- [Zod](https://zod.dev/) – Validação de formulários
+
+---
+
+## 📦 Passo a Passo para Executar o Projeto
+
+### 1. Clone o repositório
+🔗 Back-End Necessário
+Este front consome dados de uma API. Para que ele funcione corretamente, você precisa também clonar e executar o back-end:
+
+👉 Repositório: Tabulex Back-End
+
+  ```bash
+  git clone https://github.com/pedrihq/tabulex.git
+  cd tabulex
+  npm install
+  npm run dev
+  Abra o navegador e acesse: http://localhost:3000
+```````
+
+Altere a `baseURL` para o endereço correto da API backend. Exemplo:
+
+```ts
+
+export const api = axios.create({
+  baseURL: "http://125.148.0.06:8000",  // endereço do servidor backend
+});
+
 ```
+https://github.com/user-attachments/assets/5145b3e0-33cf-4496-b695-f010b6b02ec5
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
